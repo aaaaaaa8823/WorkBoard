@@ -11,5 +11,9 @@ public interface PostService {
     PostResponse getById(Long id);
     PostResponse update(Long id, UpdatePostRequest request);
     void delete(Long id);
+    List<PostResponse> list(Long departmentId, String type, String search);
+    //последние активные темы по createdAt
+    List<PostResponse> getRecent(int limit);
+    PostResponse restore(Long id);
 }
 

@@ -141,6 +141,27 @@ public class PostServiceImpl implements PostService {
         postRepository.save(post);
     }
 
+    @Override
+    @Transactional
+    public PostResponse restore(Long id) {
+        Post post = postRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Post not found"));
+
+        User current = currentUser();
+        boolean admin = "ADMIN".equalsIgnoreCase(current.getRole())
+                || "admin".equalsIgnoreCase(current.getRole());
+        if (!admin) {
+            throw new RuntimeException("Only admin can restore posts");
+        }
+
+        if (!"DELETED".equals(post.getStatus())) {
+            throw new RuntimeException("Post is not deleted");
+        }
+
+        post.setStatus("ACTIVE");
+        return toResponse(postRepository.save(post));
+    }
+
     private void assertCanModify(Post post) {
         User current = currentUser();
         boolean author = post.getAuthor().getId().equals(current.getId());
@@ -149,6 +170,23 @@ public class PostServiceImpl implements PostService {
         if (!author && !admin) {
             throw new RuntimeException("Not allowed to modify this post");
         }
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PostResponse> list(Long departmentId, String type, String search) {
+        String typeFilter = (type == null || type.isBlank()) ? null : type.trim().toUpperCase();
+        String searchFilter = (search == null || search.isBlank()) ? null : search.trim();
+
+        return postRepository.findFeed(departmentId, typeFilter, searchFilter).stream().map(this::toResponse).toList();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PostResponse> getRecent(int limit) {
+        int n = limit <= 0 ? 10 : Math.min(limit, 20);
+
+        return postRepository.findTop10ByStatusOrderByCreatedAtDesc("ACTIVE").stream().limit(n).map(this::toResponse).toList();
     }
 
 }

@@ -1,6 +1,7 @@
 package com.kind.backend.controller;
 
 import com.kind.backend.dto.request.CreatePostRequest;
+import com.kind.backend.dto.request.UpdatePostRequest;
 import com.kind.backend.dto.response.PostResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -21,5 +22,18 @@ public class PostController {
     @GetMapping("/{id}")
     public PostResponse getById(@PathVariable Long id) {
         return postService.getById(id);
+    }
+
+    @PutMapping("/{id}")
+    public PostResponse update(
+            @PathVariable Long id,
+            @Valid @RequestBody UpdatePostRequest request
+    ) {
+        return postService.update(id, request);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        postService.delete(id);
     }
 }

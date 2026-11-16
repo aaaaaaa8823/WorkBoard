@@ -36,14 +36,13 @@
   padding: 8px 14px;
   font-size: 0.8rem;
   cursor: pointer;
-  background: #fff6e3;
-  color: #e76f51;
+  background: var(--on-primary);
+  color: var(--text);
 }
 
 .quality-chip.active {
-  background: #fff;
-  color: #249d8f;
-  box-shadow: inset 0 0 0 1.5px #249d8f;
+  background: var(--primary-700);
+  color: var(--on-primary);
 }
 
 .category-row {

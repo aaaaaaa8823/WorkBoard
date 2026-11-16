@@ -17,8 +17,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #249d8f;
-  background: #fff6e3;
+  border: 2px solid var(--primary-500);
+  background: var(--bg);
   color: #249d8f;
   display: flex;
   align-items: center;
@@ -56,13 +56,13 @@
 
 .feed-post-pair {
   font-size: 0.8rem;
-  color: #249d8f;
+  color: var(--secondary-600);
 }
 
 .feed-post-quality {
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #fff6e3;
-  color: #e76f51;
+  background: var(--neutral-200);
+  color: var(--text);
 }

@@ -9,7 +9,7 @@
   margin: 0 0 12px;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text);
   text-align: left;
 }
 
@@ -44,9 +44,9 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #249d8f;
-  background: #fff6e3;
-  color: #249d8f;
+  border: 2px solid var(--primary-500);
+  background: var(--bg);
+  color: var(--primary-500);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,18 +58,18 @@
 .colleague-name {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text);
   line-height: 1.2;
 }
 
 .colleague-dept {
   font-size: 0.7rem;
-  color: #b0b0b0;
+  color: var(--neutral-400);
   margin-top: 2px;
 }
 
 .btn-recognize {
-  background: #249d8f;
+  background: var(--primary-700);
   color: #fff;
   border: none;
   border-radius: 5px;

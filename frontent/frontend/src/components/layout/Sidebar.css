@@ -7,7 +7,7 @@
   height: calc(100vh - 64px);
   overflow-y: auto;
   background: #fff;
-  border-right: 1px solid #e1e1e1;
+  border-right: 1px solid var(--neutral-400);
   padding: 24px 16px;
   box-sizing: border-box;
   display: flex;
@@ -27,8 +27,8 @@
 }
 
 .nav-item.active {
-  color: #249d8f;
-  border: 1px solid #249d8f;
+  color: var(--primary-700);
+  border: 1px solid var(--primary-700);
 }
 
 .sidebar-logo{
@@ -36,22 +36,22 @@
   margin-bottom: 6px;
   font-weight: 500;
   font-size: 18px;
-  color: #249d8f;
+  color: var(--text);
 }
 
 .sidebar-logout {
   margin-top: auto;
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #e76f51;
+  border: 1px solid var(--error);
   border-radius: 8px;
   background: transparent;
-  color: #e76f51;
+  color: var(--error);
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .sidebar-logout:hover {
-  background: #fff6e3;
+  background: var(--bg);
 }

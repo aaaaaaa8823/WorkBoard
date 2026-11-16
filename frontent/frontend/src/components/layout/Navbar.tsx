@@ -40,7 +40,7 @@ export default function Navbar(){
     <header className="navbar">
       <div className="navbar-brand">
         <span className="navbar-logo-dot" />
-        <span className="navbar-title">KindBoard</span>
+        <span className="navbar-title">WorkBoard</span>
       </div>
 
         

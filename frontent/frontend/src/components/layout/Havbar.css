@@ -9,7 +9,7 @@
   flex-shrink: 0;
   justify-content: space-between;
   background: #ffffff;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid var(--neutral-400);
 }
 
 .navbar-brand {
@@ -20,7 +20,7 @@
 
 .navbar-title {
   font-weight: 600;
-  color: #249d8f;
+  color: var(--text);
   font-size: 1.05rem;
 }
 
@@ -39,24 +39,24 @@
 
 .navbar-username {
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text);
   font-size: 0.95rem;
 }
 
 .navbar-email {
   font-size: 0.8rem;
-  color: #888;
+  color: var(--neutral-400);
 }
 
 .navbar-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #fff6e3;
-  border: 2px solid #249d8f;
+  background: var(--bg);
+  border: 2px solid var(--primary-500);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  color: #249d8f;
+  color: var(--primary-500);
 }

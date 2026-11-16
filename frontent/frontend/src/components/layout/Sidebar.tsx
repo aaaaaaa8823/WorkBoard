@@ -14,7 +14,7 @@ function handleLogout(){
         <aside className="sidebar">
             <nav className="sidebar-nav">
                 <NavLink to="/home" className={({isActive}) => isActive ? "nav-item active": "nav-item"}>
-                    Home
+                    Recognitions
                 </NavLink>
 
                 <NavLink to="/rankings" className={({isActive}) => isActive ? "nav-item active": "nav-item"}>

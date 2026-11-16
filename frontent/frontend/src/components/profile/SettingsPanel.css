@@ -9,9 +9,9 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 2px solid #249d8f;
-  background: #fff6e3;
-  color: #249d8f;
+  border: 2px solid var(--primary-500);
+  background: var(--bg);
+  color: var(--primary-500);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@
 
 .btn-primary {
   margin-top: 14px;
-  background: #249d8f;
+  background: var(--primary-700);
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -69,7 +69,7 @@
 }
 
 .btn-danger {
-  background: #e76f51;
+  background: var(--error);
   color: #fff;
   border: none;
   border-radius: 8px;

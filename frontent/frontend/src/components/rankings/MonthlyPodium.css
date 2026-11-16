@@ -4,7 +4,6 @@
   padding: 20px;
   width: 280px;
   flex-shrink: 0;
-  box-shadow: 0 2px 5px rgba(118, 118, 118, 0.2);
 }
 
 .podium-title {
@@ -49,9 +48,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #249d8f;
-  background: #fff6e3;
-  color: #249d8f;
+  border: 2px solid var(--primary-500);
+  background: var(--bg);
+  color: var(--primary-500);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +70,7 @@
 
 .podium-role {
   font-size: 0.75rem;
-  color: #249d8f;
+  color: var(--primary-700);
   margin-top: 2px;
 }
 

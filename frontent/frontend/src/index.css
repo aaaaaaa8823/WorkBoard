@@ -1,3 +1,31 @@
+:root{
+  /* neutrals */
+  --neutral-400: #c2c2c2;
+  --neutral-200: #f1f1f1;
+  --neutral-50: #fbfbfb;
+  --text: #2b2b2b;
+
+  /* primary */
+  --primary-700: #0f766e;
+  --primary-500: #12938a;
+  --primary-200: #2ca39d;
+  --on-primary: #ffffff;
+
+  /* secondary */
+  --secondary-800: #cc4b2e;
+  --secondary-600: #e95737;
+  --secondary-400: #f57555;
+
+  --success: #249d42;
+  --error: #c74042;
+
+  --bg: var(--neutral-200);
+  --surface: #ffffff;
+  --border: var(--neutral-400);
+  --accent: var(--primary-700);
+  --accent-hover: var(--primary-500);
+}
+
 *,
 *::before,
 *::after {
